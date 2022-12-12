@@ -23,6 +23,59 @@
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+
+    <!--建置資料庫-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(init);
+      function GetUrlVar(VarName) 
+      {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(window.location.href);
+      if (results == null)
+      return "";
+      else
+      return results[1];
+      }
+      // 要先取得網址裡的路徑起點終點經緯度參數 
+      var n = decodeURIComponent(GetUrlVar('id'));
+      var queryStr = "select* where F="+n;
+
+      function init(){
+      var url = 'https://docs.google.com/spreadsheets/d/1FoxmKBBI2-d5BOfZJ-iAkg7iRFc810KGKvbdZUMYSBA/gviz/tq?sheet=工作表1';
+      var query = new google.visualization.Query(url);
+      query.setQuery(queryStr);
+      query.send(processSheetsData);
+    }
+      function processSheetsData(response) {
+            var data = response.getDataTable();
+            var columns = data.getNumberOfColumns();
+            var rows = data.getNumberOfRows();
+
+              var str=' ';
+              for (var r=0 ; r<rows ; r++) {
+                  str+= '<div class="card mb-3" style="max-width: 18rem;">';
+                  str+= '  <div class="row g-0">';
+                  str+= '    <div class="col-md-4">';
+                  str+= '      <img src="'+ data.getFormattedValue(r,1) +'" class="card-img-top" alt="'+ data.getFormattedValue(r,2) +'">';
+                  str+= '    </div>';
+                  str+= '    <div class="col-md-8">';
+                  str+= '      <div class="card-body">';
+                  str+= '        <h5 class="card-title">'+ data.getFormattedValue(r,0) +'</h5>';
+                  str+= '        <p class="card-text" style="font-size: 1rem;">'+ data.getFormattedValue(r,3) +'</p>';
+                  str+= '        <a target="_blank" href="'+ data.getFormattedValue(r,4) +'" class="btn btn-primary">了解更多</a>';
+                  str+= '      </div>';
+                  str+= '    </div>';
+                  str+= '  </div>';
+                  str+= '</div>';
+              }
+              document.getElementById("demo").innerHTML = str;               
+          }
+
+    </script>
 </head>
 <body>
     <!--header and navbar-->
@@ -53,3 +106,56 @@
         </nav>
         
     </header>
+    <main>
+      <section>
+        <ul>
+          <li>
+            <a href="project.html?id=1">平面設計作品</a>
+          </li>
+          <li>
+            <a href="project.html?id=2">網頁設計作品</a>
+          </li>
+          <li>
+            <a href="project.html?id=3">其他</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <section class="left">
+          <div>
+            <img class="img_project" src="/image/project/Tiffeny品牌報紙.jpg" alt="">
+          </div>
+        </section>
+        <section class="right">
+          <div>
+            <h5>呆呆</h5>
+            <p>笨笨</p>
+            <a href=""></a>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section class="left" style="padding: 4rem;">
+          <div>
+            <img class="img_project" src="/image/project/Tiffeny品牌報紙.jpg" alt="">
+          </div>
+        </section>
+        <section class="right" >
+          <div>
+            <h1>呆呆</h1>
+            <p style="font-size: 1rem;">笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨</p>
+            <button><a href="#">READ MORE ➜ </a></button>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>平面設計作品</h2>
+        </section>
+        <section>
+          <div id="demo"></div>
+        </section>
+      </section>
+
+      </section>
+    </main>

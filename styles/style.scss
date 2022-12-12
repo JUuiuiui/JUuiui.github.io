@@ -31,6 +31,19 @@ header{
     transition: 0.5s;
 
 }
+.button{
+    padding: 1rem; 
+    border-radius: 30%;
+    border:0;
+    background-color:#858080;
+    border-radius:10px;
+    cursor:pointer;
+}
+.a{
+    text-decoration: none;
+    color:#fff;
+    letter-spacing: 0.25rem;
+}  
 
 body{
     display: flex;
@@ -82,6 +95,9 @@ body{
                 img{
                     width: 25vw;
                     flex-shrink: 0;
+                }
+                .img_project{
+                    width: 30vw;
                 }
             }
         }
@@ -155,6 +171,9 @@ section.second div#carouselExampleFade{
                     img{
                     width: 50vw;
                 }
+                    .img_project{
+                        width:70vw;
+                    }
                 }
             }
             section.right{
