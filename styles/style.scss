@@ -85,7 +85,6 @@ body{
             flex-direction: row;
             flex-wrap: wrap;
         }
-
         section.left{
             flex:1 0 0px;
             padding: 4rem;
@@ -159,10 +158,12 @@ section.second div#carouselExampleFade{
             display: flex;
             flex-direction: column;
             padding-top: 10rem;
+
             section{
                 display: flex;
                 flex-direction: column;
             }
+
             section.left{
                 padding: 0rem;
                 div{

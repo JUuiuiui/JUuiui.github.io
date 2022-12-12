@@ -57,20 +57,20 @@
 
               var str=' ';
               for (var r=0 ; r<rows ; r++) {
-                  str+= '<div class="card mb-3" style="max-width: 18rem;">';
-                  str+= '  <div class="row g-0">';
-                  str+= '    <div class="col-md-4">';
-                  str+= '      <img src="'+ data.getFormattedValue(r,1) +'" class="card-img-top" alt="'+ data.getFormattedValue(r,2) +'">';
+                  str+= '<section>';
+                  str+= '  <section class="left">';
+                  str+= '    <div>';
+                  str+= '      <img class="img_project" src="'+ data.getFormattedValue(r,1) +'" alt="'+ data.getFormattedValue(r,2) +'">';
                   str+= '    </div>';
-                  str+= '    <div class="col-md-8">';
-                  str+= '      <div class="card-body">';
-                  str+= '        <h5 class="card-title">'+ data.getFormattedValue(r,0) +'</h5>';
-                  str+= '        <p class="card-text" style="font-size: 1rem;">'+ data.getFormattedValue(r,3) +'</p>';
-                  str+= '        <a target="_blank" href="'+ data.getFormattedValue(r,4) +'" class="btn btn-primary">了解更多</a>';
-                  str+= '      </div>';
+                  str+= '  </section>';
+                  str+= '  <section class="right">';
+                  str+= '    <div>';
+                  str+= '      <h1>'+ data.getFormattedValue(r,0) +'</h1>';
+                  str+= '      <p style="font-size: 1rem;">'+ data.getFormattedValue(r,3) +'</p>';
+                  str+= '      <button><a target="_blank" href="'+ data.getFormattedValue(r,4) +'">READ MORE ➜ </a></button>';
                   str+= '    </div>';
-                  str+= '  </div>';
-                  str+= '</div>';
+                  str+= '  </section>';
+                  str+= '</section>';
               }
               document.getElementById("demo").innerHTML = str;               
           }
@@ -121,40 +121,9 @@
         </ul>
       </section>
       <section>
-        <section class="left">
-          <div>
-            <img class="img_project" src="/image/project/Tiffeny品牌報紙.jpg" alt="">
-          </div>
-        </section>
-        <section class="right">
-          <div>
-            <h5>呆呆</h5>
-            <p>笨笨</p>
-            <a href=""></a>
-          </div>
-        </section>
-      </section>
       <section>
-        <section class="left" style="padding: 4rem;">
-          <div>
-            <img class="img_project" src="/image/project/Tiffeny品牌報紙.jpg" alt="">
-          </div>
-        </section>
-        <section class="right" >
-          <div>
-            <h1>呆呆</h1>
-            <p style="font-size: 1rem;">笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨笨</p>
-            <button><a href="#">READ MORE ➜ </a></button>
-          </div>
-        </section>
+        <div id="demo"></div>
       </section>
-      <section>
-        <section>
-          <h2>平面設計作品</h2>
-        </section>
-        <section>
-          <div id="demo"></div>
-        </section>
       </section>
 
       </section>
