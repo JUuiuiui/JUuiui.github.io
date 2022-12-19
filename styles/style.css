@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -49,6 +50,13 @@ header {
   background-color: #858080;
   border-radius: 10px;
   cursor: pointer;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 11;
 }
 
 .a {
@@ -107,6 +115,72 @@ body main h2 {
   font-weight: 600;
   font-size: 2rem;
   letter-spacing: 0.5rem;
+}
+
+body main section.backImage {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("/image/project/聖誕卡片.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*直接把text-align設定在這邊的原因是因為按鈕的文字也可同時置中*/
+  text-align: center;
+}
+
+body main section.backImage div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+}
+
+body main section.backImage button.start {
+  background-color: #ffffff;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 1rem;
+}
+
+body main section.backImage button.start a {
+  text-decoration: none;
+  color: #212121;
+}
+
+body main section.backImage button.start:hover {
+  background-color: #858080;
+  padding: 0.85rem 1.7rem;
+  font-size: 1.7rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+body main section.backImage button.start:hover a {
+  color: #ffffff;
 }
 
 body main section {

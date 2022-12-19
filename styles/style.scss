@@ -39,6 +39,12 @@ header{
     border-radius:10px;
     cursor:pointer;
 }
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 11;
+  }
 .a{
     text-decoration: none;
     color:#fff;
@@ -79,6 +85,58 @@ body{
             font-size: 2rem;
             letter-spacing: 0.5rem;
         }
+        section.backImage {
+            min-height: 90vh;
+            width: 100%;
+            background-image: url("/image/project/聖誕卡片.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 0;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /*直接把text-align設定在這邊的原因是因為按鈕的文字也可同時置中*/
+            text-align: center;
+        
+            div.filter {
+              background-color: rgba(0, 0, 0, 0.5);
+              width: 100%;
+              min-height: 90vh;
+              position: absolute;
+              top: 0%;
+              z-index: -1;
+            }
+            button.start {
+              background-color: #ffffff;
+              padding:1.5rem 1.5rem;
+              font-size: 1.5rem;
+              color: white;
+              border: none;
+              border-radius: 3rem;
+              cursor: pointer;
+              transition: 0.4s;
+              margin: 1rem;
+              a{
+                text-decoration: none;
+                color: #212121;
+              }
+            }
+            button.start:hover {
+              background-color: #858080;
+              padding: 0.85rem 1.7rem;
+              font-size: 1.7rem;
+              color: white;
+              border: none;
+              border-radius: 1rem;
+              cursor: pointer;
+              a{
+                color: #ffffff;
+              }
+            }
+          }
         section{
             padding: 1rem;
             display: flex;

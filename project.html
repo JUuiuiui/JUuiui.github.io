@@ -22,8 +22,8 @@
     <!--stylesheet-->
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="javascript" href="/animate.js">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-
     <!--建置資料庫-->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
@@ -57,7 +57,7 @@
 
               var str=' ';
               for (var r=0 ; r<rows ; r++) {
-                  str+= '<section>';
+                  str+= '<section >';
                   str+= '  <section class="left">';
                   str+= '    <div>';
                   str+= '      <img class="img_project" src="'+ data.getFormattedValue(r,1) +'" alt="'+ data.getFormattedValue(r,2) +'">';
@@ -71,11 +71,13 @@
                   str+= '    </div>';
                   str+= '  </section>';
                   str+= '</section>';
+                  str+= '<hr size="4px" align="center" width="100%">';
               }
               document.getElementById("demo").innerHTML = str;               
           }
 
     </script>
+    
 </head>
 <body>
     <!--header and navbar-->
@@ -91,7 +93,7 @@
                     <a class="nav-link active  "  aria-current="page" href="index.html">HOME</a>
                   </li>
                   <li class="nav-item" style="padding-top: 1rem; letter-spacing: 0.1rem;font-size:1.25rem;padding-left:2rem;padding-right: 2rem;">
-                    <a class="nav-link active a_act"  aria-current="page" href="resume.html">RESUME</a>
+                    <a class="nav-link active a_act"  aria-current="page" href="about.html">ABOUT</a>
                   </li>
                   <li class="nav-item" style="padding-top: 1rem; letter-spacing: 0.1rem;font-size:1.25rem ;padding-left:2rem;padding-right: 2rem;">
                     <a class="nav-link active self"  aria-current="page" href="#">PROJECT</a>
@@ -107,24 +109,42 @@
         
     </header>
     <main>
-      <section>
-        <ul>
-          <li>
-            <a href="project.html?id=1">平面設計作品</a>
-          </li>
-          <li>
-            <a href="project.html?id=2">網頁設計作品</a>
-          </li>
-          <li>
-            <a href="project.html?id=3">其他</a>
-          </li>
-        </ul>
+      <section class="backImage">
+        <!--設定濾鏡-->
+        <div class="filter">
+
+        </div>
+        <h1 style="color: white;">
+            查看我過往的作品
+        </h1>
+        <section class="guide">
+          <button class="start">
+            <a href="project.html?id=1#demo">平面設計作品</a>
+          </button>
+          <br>
+          <button class="start">
+            <a href="project.html?id=2#demo">UIUX設計作品</a>
+          </button>
+          <br>
+          <button class="start">
+            <a href="project.html?id=3#demo">其他專案作品</a>
+          </button>
+        </section>
       </section>
+      <button
+      type="button"
+      class="btn btn-dark btn-floating btn-lg"
+      id="btn-back-to-top"
+      >
+        <a href="#" style="text-decoration: none;color: white;">⬆</a>
+      </button>
       <section>
-      <section>
-        <div id="demo"></div>
+        <div id="demo" ></div>
       </section>
       </section>
 
       </section>
     </main>
+    <footer>
+      <p>2022 © JEN, CHIEH-YU</p>
+    </footer>
