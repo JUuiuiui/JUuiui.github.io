@@ -23,11 +23,49 @@
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+     <!--AOS-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+     <script src="https://www.gstatic.com/charts/loader.js"></script>
+	
+     <script>
+     
+     google.charts.load('current', {'packages':['corechart']});
+     google.charts.setOnLoadCallback(init);
+ 
+     function init() {
+       var url =
+         'https://docs.google.com/spreadsheets/d/1FoxmKBBI2-d5BOfZJ-iAkg7iRFc810KGKvbdZUMYSBA/gviz/tq?sheet=工作表1';
+       var query = new google.visualization.Query(url);
+       query.setQuery('select *');
+       query.send(processSheetsData);
+     }	
+     
+     function processSheetsData(response) {
+       var data = response.getDataTable();
+       var columns = data.getNumberOfColumns();
+       var rows = data.getNumberOfRows();
+ 
+       var str='<div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000" class="row row-cols-1 row-cols-md-4 g-4" style="padding: 2rem;">';
+              for (var r=0 ; r<4 ; r++) {
+                  str+= '<div class="col">';
+                  str+= '  <div class="card">';
+                  str+= '    <img src="'+ data.getFormattedValue(r,1) +'" class="card-img-top" alt="..." >';
+                  str+= '  </div>';
+                  str+= '</div>';    
+              }
+              str+='</div>';
+              document.getElementById("indexwork").innerHTML = str;     } 
+     
+     </script>	
     
 </head>
 <body>
     <!--animation-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <div class="animation">
         <div class="animation_box">
             <svg width="61" height="102" viewBox="0 0 61 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,10 +130,17 @@
     </header>
     <!--introduction and picture-->
     <main>
+        <button
+        type="button"
+        class="btn btn-dark btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+          <a href="#" style="text-decoration: none;color: white;">⬆</a>
+        </button>
         <section class="first">
             <section class="left">
                 <div>
-                    <img src="./image/self_photo.jpg" alt="個人照片">
+                    <img src="./image/WAYA.jpg" alt="個人照片">
                 </div>
             </section>
             <section class="right">
@@ -104,36 +149,47 @@
                         WAYA設計工作室<br>
                     </h1>
                     <p>
-                        UI/UX Design <span style="color: #A08045;">/</span>
-                        Marketing <span style="color: #A08045;">/</span>
+                        Design / 
+                        Marketing / 
                         Graphic Design<br>
                     </p><br>
                     <blockquote class="qoute">我是WAYA，<br>
                         是一名注重設計思考的跨領域設計師。
                     </blockquote><br>
-                    <button><a href="/about.html">READ MORE ➜ </a></button>
                 </div>
             </section>
         </section>
-        <section class="home_second">
-            <h2>
-                ABOUT ME
-            </h2>
+        <section class="backImage home_top">
+            <!--設定濾鏡-->
+            <div class="filter">
+    
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <h1 style="color: white;">
+                    關於我
+                </h1>
+                <p style="font-size: 1rem;padding: 1rem 3rem;color: white;">
+                    「WAYA」是由很多物質組成的，<br>
+                    包含Google、Pinterest 、東泉辣椒醬、<br>
+                    許多朋朋的支持以及本人二十幾歲開始發黑的肝，<br>
+                    才形成今天的WAYA。<br>
+                    歡迎來委託做一些設計類的東東，<br>
+                    無論是平面設計、書籍排版，WAYA是個便宜又好用的工具人。<br>
+                </p>
+                <button class="button"><a style="color: white;text-decoration: none;" href="/about.html">READ MORE ➜ </a></button>
+            </div>
         </section>
-        <section class="home_third">
-            <h2>
-                WHAT I DO ?
-            </h2>
+        <section class="service_item">
+            <div style="padding: 1.5rem;">
+              <h1>作品</h1>
+            </div>
+            <div id="indexwork"style="padding-bottom:1.5rem;" ></div>
+            <button class="button"><a style="color: white;text-decoration: none;" href="/about.html">READ MORE ➜ </a></button>
         </section>
-        <section class="home_third">
-            <h2>
-                WHAT I DO ?
-            </h2>
-        </section>
-        <section class="home_third">
-            <h2>
-                WHAT I DO ?
-            </h2>
+        <section class="service_item">
+            <div style="padding: 2rem;">
+              <h1>作品</h1>
+            </div>
         </section>
 
         

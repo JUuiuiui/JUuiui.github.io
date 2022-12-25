@@ -80,6 +80,13 @@
         
     </header>
     <main onload="init()">
+      <button
+      type="button"
+      class="btn btn-dark btn-floating btn-lg"
+      id="btn-back-to-top"
+      >
+        <a href="#" style="text-decoration: none;color: white;">⬆</a>
+      </button>
       <section class="backImage contact_top">
         <!--設定濾鏡-->
         <div class="filter">
@@ -101,42 +108,47 @@
         </section>
       </section>
       <section class="contact_first" >
+        <section style="width: 55%;">
+          <h1>聯絡我們</h1>
+        </section>
+        <section class="right">
           <form  class="form-group" enctype="text/plain" accept-charset="utf-8">
-              <!-- 寄件者姓名    -->
-                <label for="exampleInputEmail1">姓名</label>
-                <input id="nameText" type="text" name="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" placeholder="姓名(name)" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
+            <!-- 寄件者姓名    -->
+              <label for="exampleInputEmail1">姓名</label>
+              <input id="nameText" type="text" name="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" placeholder="姓名(name)" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
 
-                <!-- 寄件者email -->
-                <label for="exampleInputEmail1">信箱</label>
-                <input id="emailText" type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" placeholder="Email" required>
-                
-                <!-- 寄件者電話 -->
-                <label for="exampleInputEmail1">電話</label>
-                <input id="telText"type="tel" name="Phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="電話(phone)" required>
+              <!-- 寄件者email -->
+              <label for="exampleInputEmail1">信箱</label>
+              <input id="emailText" type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" placeholder="Email" required>
+              
+              <!-- 寄件者電話 -->
+              <label for="exampleInputEmail1">電話</label>
+              <input id="telText"type="tel" name="Phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="電話(phone)" required>
 
-                <!-- 郵件目的 -->
-                <label for="exampleInputEmail1">詢問業務</label>
-                <select id="service" class="form-select" aria-label="Default select example">
-                  <option selected>無</option>
-                  <option value="平面設計">平面設計</option>
-                  <option value="網頁設計">網頁設計</option>
-                  <option value="其他業務">其他</option>
-                </select>
-                        
-                <!-- 郵件主旨 -->
-                <label for="exampleInputEmail1">主旨</label>
-                <input  id="subText" type="text" name="Subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="主旨(subject)" required>
-                        
-                <!-- 郵件內容 -->
-                <label for="exampleFormControlTextarea1">內容</label>
-                <textarea id="bodyText" name="your-message" class="form-control" id="exampleFormControlTextarea1" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
-                <br>
-                <!-- 傳送按鈕 -->
-                <div>
-                    <input type="button" value="送出訊息" class="button" onclick="submitHandler();">
-                    <a id="mailTo" style="color: aliceblue;"></a>
-                </div>
-            </form>
+              <!-- 郵件目的 -->
+              <label for="exampleInputEmail1">詢問業務</label>
+              <select id="service" class="form-select" aria-label="Default select example">
+                <option selected>無</option>
+                <option value="平面設計">平面設計</option>
+                <option value="網頁設計">網頁設計</option>
+                <option value="其他業務">其他</option>
+              </select>
+                      
+              <!-- 郵件主旨 -->
+              <label for="exampleInputEmail1">主旨</label>
+              <input  id="subText" type="text" name="Subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="主旨(subject)" required>
+                      
+              <!-- 郵件內容 -->
+              <label for="exampleFormControlTextarea1">內容</label>
+              <textarea id="bodyText" name="your-message" class="form-control" id="exampleFormControlTextarea1" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+              <br>
+              <!-- 傳送按鈕 -->
+              <div style="padding: 0;">
+                  <button onclick="submitHandler();">送出訊息</button>
+                  <a id="mailTo" style="color: aliceblue;"></a>
+              </div>
+          </form>
+        </section>
       </section>
     </main>
     <footer>

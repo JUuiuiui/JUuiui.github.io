@@ -23,8 +23,14 @@
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
     <!--header and navbar-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark" >
@@ -73,7 +79,7 @@
         </h1>
         <section class="guide">
           <button class="start">
-            <a href="service.html#item">服務項目</a>
+            <a href="service.html#service_1">服務項目</a>
           </button>
           <button class="start">
             <a href="project.html?id=1#demo">服務流程</a>
@@ -83,35 +89,34 @@
           </button>
         </section>
       </section>
+      <div id="service_1"></div>
       <section class="service_item">
+        <div style="padding: 2rem;">
+          <h1>服務項目</h1>
+        </div>
           <section id="section_service">
             <div class="container">
               <div class="row">
-                <div class="col-sm-12">
-                  <h1>服務項目</h1>
-                </div>
-                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg" alt=""/>
+                <div data-aos="fade-up" data-aos-duration="3000" class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg" alt=""/>
                   <h3>平面設計</h3>
+                  <p style="font-size: 1rem;">海報 | 名片 | LOGO設計 | 刊物美編（DM/書籍）|</p>
                 </div>
-                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg" alt=""/>
+                <div data-aos="fade-up" data-aos-duration="3000" class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg" alt=""/>
                   <h3>網頁設計</h3>
+                  <p style="font-size: 1rem;">海報 | 名片 | LOGO設計 | 刊物美編（DM/書籍）|</p>
                 </div>
-                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg" alt=""/>
+                <div data-aos="fade-up" data-aos-duration="3000" class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg" alt=""/>
                   <h3>其他</h3>
+                  <p style="font-size: 1rem;">海報 | 名片 | LOGO設計 | 刊物美編（DM/書籍）|</p>
                 </div>
               </div>
             </div>
           </section>
       </section>
       <section class="service_item">
-        <h2>
-          服務流程
-        </h2>
-      </section>
-      <section class="service_item">
-        <h2>
-          服務報價
-        </h2>
+        <div style="padding: 2rem;">
+          <h1>服務流程</h1>
+        </div>
       </section>
     </main>
     <footer>

@@ -8,7 +8,7 @@
 
 header{
     display: flex;
-    background-color: #E0DEDB;
+    background-color: #858080;
     padding-top: 2rem;
     padding-bottom: 1.25rem;
     padding-right: 1.25rem;
@@ -20,14 +20,16 @@ header{
     box-shadow: 0 -7px 15px #858080;
 }
 .navbar-dark .navbar-nav .nav-link.active{
-    color: #212121;
+    color: #ffffff;
+    opacity: 50%;
 }
 
 .navbar-dark .navbar-nav .nav-link.active.self{
-     color: #858080;
+    color: #ffffff;
+    opacity: 100%;
 }
 .navbar-dark .navbar-nav .nav-link.active:hover  {
-    border-bottom: #858080 solid 3px;
+    border-bottom: #ffffff solid 3px;
     transition: 0.5s;
 
 }
@@ -85,6 +87,7 @@ body{
             font-size: 2rem;
             letter-spacing: 0.5rem;
         }
+        section.home_top {background-image: url("/image/166012_l.jpg");}
         section.project_top {background-image: url("/image/project/Tiffeny聖誕小卡.jpg");}
         section.about_top {background-image: url("/image/166012_l.jpg");}
         section.backImage {
@@ -195,12 +198,17 @@ body{
                 }
             }
         }
+        section#section_service .col-sm-4 {
+            text-align: center;
+          }
+          section#section_service .icon_service {
+            width: 60%;
+          }
         section.service_item{
             display: flex;
             justify-content: center;
-            text-align: center;
-
         }
+        
 
     }
     footer{
