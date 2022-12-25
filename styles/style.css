@@ -88,12 +88,12 @@ body main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
 }
 
 body main p, body main h1, body main h2 {
-  color: #212121;
+  color: #53565C;
   padding: 1rem;
 }
 
@@ -117,10 +117,17 @@ body main h2 {
   letter-spacing: 0.5rem;
 }
 
+body main section.project_top {
+  background-image: url("/image/project/Tiffeny聖誕小卡.jpg");
+}
+
+body main section.about_top {
+  background-image: url("/image/166012_l.jpg");
+}
+
 body main section.backImage {
   min-height: 90vh;
   width: 100%;
-  background-image: url("/image/project/聖誕卡片.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -257,6 +264,16 @@ body main section.right div button:hover {
   transition: 1s;
 }
 
+body main section.service_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
 body footer {
   position: relative;
   background-color: #858080;
@@ -289,7 +306,26 @@ section.second div#carouselExampleFade {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 10rem;
+    padding-top: 7rem;
+  }
+  body main section.commission_guide h3 {
+    font-size: 1.5rem;
+    padding: 2.25rem;
+    line-height: 3.5rem;
+  }
+  body main section.commission_guide section.cards div.card {
+    padding: 2rem;
+  }
+  body main section.commission_guide section.cards div.card img {
+    width: 50vw;
+    height: 50vw;
+  }
+  body main section.commission_guide section.cards div.card h4 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+  body main section.commission_guide section.cards div.card p {
+    padding: 2rem 1rem;
   }
   body main section {
     display: -webkit-box;

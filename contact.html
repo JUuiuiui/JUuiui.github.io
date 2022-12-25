@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./styles/animation.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f98199136.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         var initSubject='',initBody='';
         //傳送按鈕
@@ -31,7 +32,7 @@
             var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
             var email = emailText.value;
             var tel = telText.value;
-            var subject = subText.value;
+            var subject =  "【詢問"+ service.value+ "】" + subText.value;
         //把user填的資料都塞到 mail body 中
             var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
                 body += "From："+nameText.value+'%0A';
@@ -47,10 +48,6 @@
             toText.value=initTo;
             bodyText.value=initBody;
         }
-        var a = "24.12328,120.676"
-        var b = "16"
-        str +='<a target ="_blank" href="http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q='+a+'&z='+b+'"></a>'
-        document.getElementById("demo").innerHTML = str;
     </script>
 </head>
 <body>
@@ -67,7 +64,7 @@
                     <a class="nav-link active  "  aria-current="page" href="index.html">HOME</a>
                   </li>
                   <li class="nav-item" style="padding-top: 1rem; letter-spacing: 0.1rem;font-size:1.25rem;padding-left:2rem;padding-right: 2rem;">
-                    <a class="nav-link active a_act "  aria-current="page" href="about.html">ABOUT</a>
+                    <a class="nav-link active a_act "  aria-current="page" href="service.html">SERVICE</a>
                   </li>
                   <li class="nav-item" style="padding-top: 1rem; letter-spacing: 0.1rem;font-size:1.25rem ;padding-left:2rem;padding-right: 2rem;">
                     <a class="nav-link active a_act"  aria-current="page" href="project.html">PROJECT</a>
@@ -83,14 +80,27 @@
         
     </header>
     <main onload="init()">
-      <section>
-        <button>
-          <div id ="demo">
-            <a target ="_blank" href="http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=24.12328,120.676&z=16">1p</a>
-          </div>
-        </button>
+      <section class="backImage contact_top">
+        <!--設定濾鏡-->
+        <div class="filter">
+
+        </div>
+        <h1 style="color: white;">
+            CONTACT
+        </h1>
+        <section class="guide">
+          <button class="start">
+            <a href="#" style="font-size: 2rem;padding: 1rem;"><i class="fa-regular fa-envelope"></i></a>
+          </button>
+          <button class="start">
+            <a href="https://www.instagram.com/waya2020/" target="_blank" style="font-size: 2rem;padding: 1rem;"><i class="fa-brands fa-instagram"></i></a>
+          </button>
+          <button class="start">
+            <a href="project.html?id=1#demo" style="font-size: 2rem;padding: 1rem;"><i class="fa-brands fa-behance"></i></a>
+          </button>
+        </section>
       </section>
-      <section>
+      <section class="contact_first" >
           <form  class="form-group" enctype="text/plain" accept-charset="utf-8">
               <!-- 寄件者姓名    -->
                 <label for="exampleInputEmail1">姓名</label>
@@ -103,7 +113,16 @@
                 <!-- 寄件者電話 -->
                 <label for="exampleInputEmail1">電話</label>
                 <input id="telText"type="tel" name="Phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="電話(phone)" required>
-                
+
+                <!-- 郵件目的 -->
+                <label for="exampleInputEmail1">詢問業務</label>
+                <select id="service" class="form-select" aria-label="Default select example">
+                  <option selected>無</option>
+                  <option value="平面設計">平面設計</option>
+                  <option value="網頁設計">網頁設計</option>
+                  <option value="其他業務">其他</option>
+                </select>
+                        
                 <!-- 郵件主旨 -->
                 <label for="exampleInputEmail1">主旨</label>
                 <input  id="subText" type="text" name="Subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  value size="60" aria-invalid="false" placeholder="主旨(subject)" required>
