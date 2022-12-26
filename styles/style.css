@@ -369,6 +369,9 @@ section.second div#carouselExampleFade {
   body main section.right div {
     padding: 1rem;
   }
+  body .map iframe {
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 991px) {
