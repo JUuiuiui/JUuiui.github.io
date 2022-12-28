@@ -41,6 +41,30 @@ header{
     border-radius:10px;
     cursor:pointer;
 }
+button.start_li {
+    background-color:#85808000;
+    padding:1rem 1rem;
+    font-size: 1.5rem;
+    border: #858080 1px solid;
+
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 2rem;
+    a{
+      text-decoration: none;
+      color: #858080;
+    }
+  }
+  button.start_li:hover {
+    background-color: #858080;
+    color: #858080;
+    border: none;
+    box-shadow: #53565C;
+    cursor: pointer;
+    a{
+      color: #E0DEDB;
+    }
+  }
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -87,7 +111,7 @@ body{
             font-size: 2rem;
             letter-spacing: 0.5rem;
         }
-        section.home_top {background-image: url("/image/166012_l.jpg");}
+        section.home_top {background-image: url("/image/self_photo.jpg");}
         section.project_top {background-image: url("/image/project/Tiffeny聖誕小卡.jpg");}
         section.about_top {background-image: url("/image/166012_l.jpg");}
         section.backImage {
@@ -114,30 +138,27 @@ body{
               z-index: -1;
             }
             button.start {
-              background-color: #ffffff;
-              padding:1.5rem 1.5rem;
+              background-color:#85808000;
+              padding:1rem 1rem;
               font-size: 1.5rem;
-              color: white;
-              border: none;
-              border-radius: 3rem;
+              border: #fff 1px solid;
+
               cursor: pointer;
               transition: 0.4s;
-              margin: 1rem;
+              margin: 2rem;
               a{
                 text-decoration: none;
-                color: #858080;
+                color: #fff;
               }
             }
             button.start:hover {
-              background-color: #858080;
-              padding: 0.85rem 1.7rem;
-              font-size: 1.7rem;
-              color: white;
+              background-color: white;
+              color: #858080;
               border: none;
-              border-radius: 1rem;
+              box-shadow: #53565C;
               cursor: pointer;
               a{
-                color: #ffffff;
+                color: #858080;
               }
             }
           }
@@ -208,8 +229,23 @@ body{
             display: flex;
             justify-content: center;
         }
-        
+        section.contact_first{
+            display: flex;
+            .contact_left{
+                display: flex;
+                flex:2 4 300px;
+                flex-direction: column;
+                padding: 2rem;
+            }
+            .contact_right{
+                display: flex;
+                flex:2 6 250px;
+                flex-direction: column;
+                padding: 2rem;
+    
+            }
 
+        }
     }
     footer{
         position: relative;
@@ -282,9 +318,14 @@ section.second div#carouselExampleFade{
             }
             }
         }
+        section.contact_left{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
         .map{
             iframe{
-                width: 90vw;
+                width: 80vw;
             }
             
         }

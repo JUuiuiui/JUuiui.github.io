@@ -89,31 +89,29 @@
       </button>
       <section class="backImage contact_top">
         <!--設定濾鏡-->
-        <div class="filter">
-
-        </div>
+        <div class="filter"></div>
         <h1 style="color: white;">
             CONTACT
         </h1>
         <section class="guide">
           <button class="start">
-            <a href="#" style="font-size: 2rem;padding: 1rem;"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#form" style="font-size: 2rem;padding: 1rem;"><i class="fa-regular fa-envelope"></i></a>
           </button>
           <button class="start">
             <a href="https://www.instagram.com/waya2020/" target="_blank" style="font-size: 2rem;padding: 1rem;"><i class="fa-brands fa-instagram"></i></a>
           </button>
           <button class="start">
-            <a href="project.html?id=1#demo" style="font-size: 2rem;padding: 1rem;"><i class="fa-brands fa-behance"></i></a>
+            <a href="https://www.behance.net/waya0520" target="_blank" style="font-size: 2rem;padding: 1rem;"><i class="fa-brands fa-behance"></i></a>
           </button>
         </section>
       </section>
       <section class="contact_first" >
-        <section style="width: 55%;">
+        <section class="contact_left">
           <div>
             <h1>聯絡我</h1>
-            <p style="font-size: 1rem;">
+            <p style="font-size: 1rem;text-align: left;">
               若有相關合作事宜，
-              歡迎寄信至wayadesign2020@gmail.com
+              歡迎寄信至wayadesign2020@gmail.com 
               或是填寫表單。
           </div>
           <div class="map" >
@@ -122,7 +120,7 @@
           
           </p>
         </section>
-        <section class="right">
+        <section  id="form"class="contact_right">
           <form  class="form-group" enctype="text/plain" accept-charset="utf-8">
             <!-- 寄件者姓名    -->
               <label for="exampleInputEmail1">姓名</label>
@@ -155,7 +153,7 @@
               <br>
               <!-- 傳送按鈕 -->
               <div style="padding: 0;">
-                  <button onclick="submitHandler();">送出訊息</button>
+                  <button class="button" style="color: aliceblue;" onclick="submitHandler();">送出訊息</button>
                   <a id="mailTo" style="color: aliceblue;"></a>
               </div>
           </form>

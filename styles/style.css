@@ -54,6 +54,35 @@ header {
   cursor: pointer;
 }
 
+button.start_li {
+  background-color: #85808000;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+  border: #858080 1px solid;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 2rem;
+}
+
+button.start_li a {
+  text-decoration: none;
+  color: #858080;
+}
+
+button.start_li:hover {
+  background-color: #858080;
+  color: #858080;
+  border: none;
+  -webkit-box-shadow: #53565C;
+          box-shadow: #53565C;
+  cursor: pointer;
+}
+
+button.start_li:hover a {
+  color: #E0DEDB;
+}
+
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -120,7 +149,7 @@ body main h2 {
 }
 
 body main section.home_top {
-  background-image: url("/image/166012_l.jpg");
+  background-image: url("/image/self_photo.jpg");
 }
 
 body main section.project_top {
@@ -165,35 +194,32 @@ body main section.backImage div.filter {
 }
 
 body main section.backImage button.start {
-  background-color: #ffffff;
-  padding: 1.5rem 1.5rem;
+  background-color: #85808000;
+  padding: 1rem 1rem;
   font-size: 1.5rem;
-  color: white;
-  border: none;
-  border-radius: 3rem;
+  border: #fff 1px solid;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  margin: 1rem;
+  margin: 2rem;
 }
 
 body main section.backImage button.start a {
   text-decoration: none;
-  color: #858080;
+  color: #fff;
 }
 
 body main section.backImage button.start:hover {
-  background-color: #858080;
-  padding: 0.85rem 1.7rem;
-  font-size: 1.7rem;
-  color: white;
+  background-color: white;
+  color: #858080;
   border: none;
-  border-radius: 1rem;
+  -webkit-box-shadow: #53565C;
+          box-shadow: #53565C;
   cursor: pointer;
 }
 
 body main section.backImage button.start:hover a {
-  color: #ffffff;
+  color: #858080;
 }
 
 body main section {
@@ -287,6 +313,40 @@ body main section.service_item {
           justify-content: center;
 }
 
+body main section.contact_first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main section.contact_first .contact_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 4 300px;
+          flex: 2 4 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+body main section.contact_first .contact_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 6 250px;
+          flex: 2 6 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
 body footer {
   position: relative;
   background-color: #858080;
@@ -369,8 +429,18 @@ section.second div#carouselExampleFade {
   body main section.right div {
     padding: 1rem;
   }
+  body section.contact_left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem;
+  }
   body .map iframe {
-    width: 90vw;
+    width: 80vw;
   }
 }
 
