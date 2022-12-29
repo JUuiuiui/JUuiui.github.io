@@ -56,8 +56,9 @@ header {
 
 button.start_li {
   background-color: #85808000;
-  padding: 1rem 1rem;
-  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
   border: #858080 1px solid;
   cursor: pointer;
   -webkit-transition: 0.4s;
@@ -81,6 +82,31 @@ button.start_li:hover {
 
 button.start_li:hover a {
   color: #E0DEDB;
+}
+
+.arrow-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.arrow-bottom i {
+  font-size: 3rem;
+  color: #848081;
+}
+
+.flow {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #btn-back-to-top {
@@ -195,8 +221,9 @@ body main section.backImage div.filter {
 
 body main section.backImage button.start {
   background-color: #85808000;
-  padding: 1rem 1rem;
-  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
   border: #fff 1px solid;
   cursor: pointer;
   -webkit-transition: 0.4s;
@@ -296,11 +323,11 @@ body main section.right div button:hover {
   transition: 1s;
 }
 
-body main section#section_service .col-sm-4 {
+body main section .section_service .col-sm-4 {
   text-align: center;
 }
 
-body main section#section_service .icon_service {
+body main section .section_service .icon_service {
   width: 60%;
 }
 
@@ -379,7 +406,7 @@ section.second div#carouselExampleFade {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 7rem;
+    padding-top: 6.5rem;
   }
   body main section.commission_guide h3 {
     font-size: 1.5rem;
