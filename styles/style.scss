@@ -125,6 +125,17 @@ body{
             font-size: 2rem;
             letter-spacing: 0.5rem;
         }
+        ol{
+            li{
+                color: #53565C;
+                padding: 0.5rem;
+                font-size: 1rem;
+                line-height: 2;
+                letter-spacing: 0.35rem;
+                text-align: justify;
+                
+            }
+        }
         section.home_top {background-image: url("/image/self_photo.jpg");}
         section.project_top {background-image: url("/image/project/Tiffeny聖誕小卡.jpg");}
         section.about_top {background-image: url("/image/166012_l.jpg");}
